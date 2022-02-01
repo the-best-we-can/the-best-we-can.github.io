@@ -35,12 +35,14 @@
 
     <div class="page__footer">
       <footer>
-        <div class="page__footer-copyright">&copy; {{ site.time | date: '%Y' }} {{ site.author.name }}. <a href="https://twitter.com/migftw" rel="nofollow">@migftw</a> <span class="page__footer-heart"><i class="fa fa-twitter" aria-hidden="true"></i></span>. <a href="https://github.com/migftw/sparrowx">SparrowX</a> built on top of <a href="https://github.com/lingxz/sparrow">@sparrow</a>.</div>
+        <div class="page__footer-copyright">
+          &copy; {{ site.time | date: '%Y' }} {% if site.author.url %}<a href="{{site.author.url}}">{{ site.author.name }}</a>{% else %}{{ site.author.name }}{% endif %}.
+          Source: <a href="https://github.com/the-best-we-can/the-best-we-can.github.io">here</a>. Theme: <a href="https://github.com/migftw/sparrowx">SparrowX</a> built on top of <a href="https://github.com/lingxz/sparrow">@sparrow</a>.
+        </div>
       </footer>
     </div>
      <script src="{{ '/compressed.js' | absolute_url }}"></script>
     <!--<script src="{{ '/assets/js/plugins/jquery-1.12.4.min.js' | absolute_url }}"></script>
-    <script src="{{ '/assets/js/plugins/rrssb.min.js' | absolute_url }}"></script>
     <script src="{{ '/assets/js/slimmenu.js' | absolute_url }}"></script>
     <script src="{{ '/assets/js/main.js' | absolute_url }}"></script> -->
     {% include analytics.html %}
